@@ -33,14 +33,14 @@ export default function GetStarted() {
       <View className="items-center px-6">
         <Image
           source={require("../assets/images/starter.png")}
-          className="w-40 h-40 mb-4"
+          className="w-80 h-80 mb-4"
           resizeMode="contain"
         />
         <Text
           className="text-4xl text-center text-amber-900"
           style={{ fontFamily: "PlayfairDisplay_700Bold" }}
         >
-          Star Coffee
+          Anas Coffee Waala
         </Text>
 
         {/* Subtitle */}

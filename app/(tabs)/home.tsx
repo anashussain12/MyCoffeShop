@@ -11,6 +11,7 @@ import AppLoading from "expo-app-loading";
 
 import Categories from "../Components/Categories";
 import Offer from "../Components/Offer";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Navbar() {
   // Load fonts
@@ -24,6 +25,7 @@ export default function Navbar() {
   }
 
   return (
+    <SafeAreaView className="flex-1 bg-white">
     <ScrollView className="bg-white">
       {/* Header */}
       <View className="flex-row items-center justify-between px-4 py-3 bg-white">
@@ -52,7 +54,7 @@ export default function Navbar() {
           style={{ fontFamily: "Lato_400Regular" }}
           className="text-lg text-gray-600"
         >
-          Good Morning 👋
+          Good Morning
         </Text>
         <Text
           style={{ fontFamily: "PlayfairDisplay_700Bold" }}
@@ -66,5 +68,6 @@ export default function Navbar() {
       <Categories />
       <Offer />
     </ScrollView>
+    </SafeAreaView>
   );
 }
