@@ -4,8 +4,8 @@ export default function RootLayout() {
   return (
     <Stack
       screenOptions={{
-        headerShown: false, // ✅ no headers anywhere
+        headerShown: false,
       }}
-    ></Stack>
+    />
   );
 }

@@ -61,7 +61,7 @@ const Categories = () => {
 
   return (
     <ScrollView
-      className="bg-white flex-1"
+      className="bg-white flex-1 mb-20"
       showsVerticalScrollIndicator={false}
     >
       {/* Title */}
