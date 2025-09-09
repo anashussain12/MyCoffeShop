@@ -1,7 +1,7 @@
 import { Tabs } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
 import { View, Text } from "react-native";
 import "../../global.css";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function TabsLayout() {
   return (
@@ -33,20 +33,11 @@ export default function TabsLayout() {
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Ionicons
-              className="mt-10"
+              className="mt-1"
                 name={focused ? "home" : "home-outline"}
                 size={26}
                 color={focused ? "#A0522D" : "gray"}
               />
-              <Text
-                style={{
-                  fontSize: 12,
-                  color: focused ? "#A0522D" : "gray",
-                  marginTop: 2,
-                }}
-              >
-                Home
-              </Text>
             </View>
           ),
         }}
@@ -60,20 +51,12 @@ export default function TabsLayout() {
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Ionicons
-              className="mt-10"
+              className="mt-1"
                 name={focused ? "heart" : "heart-outline"}
                 size={26}
                 color={focused ? "#A0522D" : "gray"}
               />
-              <Text
-                style={{
-                  fontSize: 12,
-                  color: focused ? "#A0522D" : "gray",
-                  marginTop: 2,
-                }}
-              >
-                Favourite
-              </Text>
+              
             </View>
           ),
         }}
@@ -87,20 +70,12 @@ export default function TabsLayout() {
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Ionicons
-              className="mt-10"
+              className="mt-1"
                 name={focused ? "cart" : "cart-outline"}
                 size={26}
                 color={focused ? "#A0522D" : "gray"}
               />
-              <Text
-                style={{
-                  fontSize: 12,
-                  color: focused ? "#A0522D" : "gray",
-                  marginTop: 2,
-                }}
-              >
-                Cart
-              </Text>
+             
             </View>
           ),
         }}

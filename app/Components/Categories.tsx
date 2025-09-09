@@ -8,9 +8,13 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { useFonts, PlayfairDisplay_700Bold } from "@expo-google-fonts/playfair-display";
+import {
+  useFonts,
+  PlayfairDisplay_700Bold,
+} from "@expo-google-fonts/playfair-display";
 import { Lato_400Regular } from "@expo-google-fonts/lato";
 import AppLoading from "expo-app-loading";
+import ProductCard from "./ProductCard";
 
 type IconName = keyof typeof Ionicons.glyphMap;
 
@@ -39,16 +43,39 @@ const Categories = () => {
   ];
 
   const coffeeCards = [
-    { id: 1, name: "Cappuccino", price: "$9.99", image: require("../../assets/images/cappuccino.png") },
-    { id: 2, name: "Espresso", price: "$9.99", image: require("../../assets/images/espresso.png") },
-    { id: 3, name: "Latte", price: "$8.99", image: require("../../assets/images/cappuccino.png") },
-    { id: 4, name: "Mocha", price: "$10.99", image: require("../../assets/images/cappuccino.png") },
+    {
+      id: 1,
+      name: "Cappuccino",
+      price: "$9.99",
+      image: require("../../assets/images/cappuccino.png"),
+    },
+    {
+      id: 2,
+      name: "Espresso",
+      price: "$9.99",
+      image: require("../../assets/images/espresso.png"),
+    },
+    {
+      id: 3,
+      name: "Latte",
+      price: "$8.99",
+      image: require("../../assets/images/cappuccino.png"),
+    },
+    {
+      id: 4,
+      name: "Mocha",
+      price: "$10.99",
+      image: require("../../assets/images/cappuccino.png"),
+    },
   ];
 
   // ✅ Combined filter for search + category
   const filteredCards = coffeeCards.filter((card) => {
-    const matchesCategory = activeCategory === "All" || card.name === activeCategory;
-    const matchesSearch = card.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory =
+      activeCategory === "All" || card.name === activeCategory;
+    const matchesSearch = card.name
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -66,7 +93,7 @@ const Categories = () => {
 
       {/* Categories Title */}
       <Text
-        className="px-5 py-3 text-xl text-black"
+        className="px-5 py-3 text-3xl text-black"
         style={{ fontFamily: "PlayfairDisplay_700Bold" }}
       >
         Categories
@@ -114,26 +141,27 @@ const Categories = () => {
         >
           {filteredCards.length > 0 ? (
             filteredCards.map((card) => (
-              <View
-                key={card.id}
-                className="bg-white border rounded-3xl mr-4 overflow-hidden"
-              >
-                <Image source={card.image} />
-                <View className="py-3 px-4">
-                  <Text
-                    className="text-lg"
-                    style={{ fontFamily: "PlayfairDisplay_700Bold" }}
-                  >
-                    {card.name}
-                  </Text>
-                  <Text
-                    className="text-base text-gray-600"
-                    style={{ fontFamily: "Lato_400Regular" }}
-                  >
-                    Price: {card.price}
-                  </Text>
-                </View>
-              </View>
+              // <View
+              //   key={card.id}
+              //   className="bg-white border rounded-3xl mr-4 overflow-hidden"
+              // >
+              //   <Image source={card.image} />
+              //   <View className="py-3 px-4">
+              //     <Text
+              //       className="text-lg"
+              //       style={{ fontFamily: "PlayfairDisplay_700Bold" }}
+              //     >
+              //       {card.name}
+              //     </Text>
+              //     <Text
+              //       className="text-base text-gray-600"
+              //       style={{ fontFamily: "Lato_400Regular" }}
+              //     >
+              //       Price: {card.price}
+              //     </Text>
+              //   </View>
+              // </View>
+              <ProductCard key={card.id} product={card} />
             ))
           ) : (
             <Text

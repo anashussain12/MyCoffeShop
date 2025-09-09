@@ -66,7 +66,7 @@ const Categories = () => {
     >
       {/* Title */}
       <Text
-        className="px-5 text-xl text-black"
+        className="px-5 text-3xl text-black"
         style={{ fontFamily: "PlayfairDisplay_700Bold" }}
       >
         Special Offer

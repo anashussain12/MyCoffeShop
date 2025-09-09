@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <SafeAreaView className="flex-1 bg-white">
-    <ScrollView className="bg-white">
+    <ScrollView className="bg-white p-2">
       {/* Header */}
       <View className="flex-row items-center justify-between px-4 py-3 bg-white">
         <TouchableOpacity>
@@ -54,7 +54,7 @@ export default function Navbar() {
           style={{ fontFamily: "Lato_400Regular" }}
           className="text-lg text-gray-600"
         >
-          Good Morning
+          Good Morning!
         </Text>
         <Text
           style={{ fontFamily: "PlayfairDisplay_700Bold" }}
