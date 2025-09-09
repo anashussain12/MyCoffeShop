@@ -15,6 +15,18 @@ const PRODUCTS = [
     price: 799,
     image: require("../../assets/images/espresso.png"),
   },
+  {
+    id: "3",
+    name: "Latte",
+    price: 8.99,
+    image: require("../../assets/images/espresso.png"),
+  },
+  {
+    id: "4",
+    name: "Mocha",
+    price: 10.99,
+    image: require("../../assets/images/mocha.jpg"),
+  },
 ];
 
 export default function ProductDetails() {

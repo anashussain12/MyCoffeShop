@@ -65,7 +65,7 @@ const Categories = () => {
       id: 4,
       name: "Mocha",
       price: "$10.99",
-      image: require("../../assets/images/cappuccino.png"),
+      image: require("../../assets/images/mocha.jpg"),
     },
   ];
 
