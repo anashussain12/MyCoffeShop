@@ -36,7 +36,6 @@ export default function ProductDetails() {
   const product = PRODUCTS.find((p) => p.id === id);
 
   if (!product) return <Text>Product not found</Text>;
-  // if (!product) return <Text>Product not found</Text>;
 
   return (
     <SafeAreaView className="flex-1 bg-white">
