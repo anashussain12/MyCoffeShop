@@ -21,7 +21,7 @@ export default function GetStarted() {
   });
 
   if (!fontsLoaded) {
-    return null; // show nothing until fonts load
+    return null; 
   }
 
   return (
@@ -42,16 +42,12 @@ export default function GetStarted() {
         >
           Anas Coffee Waala
         </Text>
-
-        {/* Subtitle */}
         <Text
           className="text-gray-800 mt-3 text-lg text-center"
           style={{ fontFamily: "Lato_400Regular" }}
         >
           “Awaken your senses, one cup at a time.”
         </Text>
-
-        {/* Extra description */}
         <Text
           className="text-gray-600 mt-2 text-center px-6"
           style={{ fontFamily: "Lato_400Regular" }}
