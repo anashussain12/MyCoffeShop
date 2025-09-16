@@ -22,10 +22,6 @@ export default function GetStarted() {
 
   if (!fontsLoaded) {
     return null; 
-    // return null; 
-    // return null; 
-    // return null; 
-    // return null; 
   }
 
   return (
